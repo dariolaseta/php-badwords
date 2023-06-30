@@ -4,7 +4,7 @@
 
     $text_length = strlen($received_text);
     
-    $censored_badword = str_replace($received_badword, "-----", $received_text);
+    $censored_badword = str_replace($received_badword, "***", $received_badword);
 ?>
 
 <!DOCTYPE html>
@@ -17,6 +17,10 @@
     <body>
         <h1>
             Il paragrafo è: <?php echo $received_text ?>, e la sua lunghezza è: <?php echo $text_length ?>
+        </h1>
+
+        <h1>
+            Il paragrafo è: <?php echo $received_text ?>, la censura è: <?php echo $censored_badword ?>
         </h1>
     </body>
 </html>
